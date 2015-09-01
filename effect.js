@@ -41,5 +41,5 @@ $.fn.lightSource = function(options) {
   }
 
 $(document).ready(function() {
-  $('.text').lightSource({distanceBlur: true, intensity: 3});
+  $('.text').lightSource({distanceBlur: true, blur: 2, intensity: 5, distanceBlurAmount: 10, opacity: 0.3});
 });
