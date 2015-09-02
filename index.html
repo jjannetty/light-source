@@ -4,16 +4,30 @@
   <title></title>
   <style type="text/css">
     html, body {
-      background: #222;
+      background: #f8f8f8;
+      margin: 0;
+      padding: 0;
     }
+
+    nav {
+      height: 60px;
+    }
+
     section {
-      width: 960px;
-      margin: 0 auto;
-      padding: 200px 0;
+      position: relative;
+      width: 100%;
+    }
+
+    .bg-dark {
+      background: #222;
     }
 
     .viewport {
-
+      background: #222;
+      width: 960px;
+      margin: 0 auto;
+      padding: 200px 0;
+      overflow-y: hidden;
     }
 
     .text {
@@ -29,10 +43,14 @@
   <script type="text/javascript" src='effect.js'></script>
 </head>
 <body>
-  <section class='viewport'>
-    <div class='text'>
-      LIGHT SOURCE
+  <nav></nav>
+  <section class = 'bg-dark'>
+    <div class='viewport'>
+      <div class='text'>
+        LIGHT SOURCE
+      </div>
     </div>
   </section>
+
 </body>
 </html>
