@@ -11,7 +11,7 @@ $.fn.lightSource = function(options) {
       offsetY: 0,
       lightWidth: 700,
       lightHeight: 700,
-      lightOpacity: 0.08,
+      lightOpacity: 0.1,
       lightBlur: 40,
       lightColor: '#FFFFCC',
     }, options);
@@ -82,5 +82,5 @@ $.fn.lightSource = function(options) {
   }
 
 $(document).ready(function() {
-  $('.text').lightSource({distanceBlur: true, blur: 2, intensity: 5, distanceBlurAmount: 10, opacity: 0.3});
+  $('.text').lightSource({distanceBlur: true, blur: 2, intensity: 5, distanceBlurAmount: 20, opacity: 0.3, lightOpacity: 0.07});
 });

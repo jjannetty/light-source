@@ -7,10 +7,12 @@
       background: #f8f8f8;
       margin: 0;
       padding: 0;
+      font-family: 'Oswald', sans-serif;
     }
 
     nav {
-      height: 60px;
+      text-align: center;
+      color: #ccc;
     }
 
     section {
@@ -21,11 +23,13 @@
     .bg-dark {
       background: #222;
     }
+    .wrap {
+      width: 960px;
+      margin: 0 auto;
+    }
 
     .viewport {
       background: #222;
-      width: 960px;
-      margin: 0 auto;
       padding: 200px 0;
       overflow-y: hidden;
     }
@@ -34,7 +38,6 @@
       color: #111;
       cursor: default;
       font-size: 80px;
-      font-family: 'Oswald', sans-serif;
       text-transform: uppercase;
       text-align: center;
     }
@@ -43,9 +46,15 @@
   <script type="text/javascript" src='effect.js'></script>
 </head>
 <body>
-  <nav></nav>
+  <nav>
+    <div class='wrap'>
+      <h1>
+        JOHN JANNETTY
+      </h1>
+    </div>
+  </nav>
   <section class = 'bg-dark'>
-    <div class='viewport'>
+    <div class='wrap viewport'>
       <div class='text'>
         LIGHT SOURCE
       </div>
