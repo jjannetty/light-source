@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <title>Light Source</title>
+
   <style type="text/css">
     html, body {
       background: #f8f8f8;
@@ -28,7 +29,7 @@
       margin: 0 auto;
     }
 
-    .viewport {
+    #viewport {
       background: #222;
       padding: 200px 0;
       overflow-y: hidden;
@@ -42,8 +43,21 @@
       text-align: center;
     }
   </style>
+
   <script type="text/javascript" src='https://code.jquery.com/jquery-1.11.3.min.js'></script>
-  <script type="text/javascript" src='effect.js'></script>
+  <script type="text/javascript" src='light-source-min.js'></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#viewport').lightSource({
+        distanceBlur: true,
+        blur: 2,
+        intensity: 5,
+        distanceBlurAmount: 20,
+        opacity: 0.3,
+        lightOpacity: 0.07
+      });
+    });
+  </script>
 </head>
 <body>
   <nav>
@@ -53,8 +67,8 @@
       </h1>
     </div>
   </nav>
-  <section class = 'bg-dark'>
-    <div class='wrap viewport'>
+  <section class ='bg-dark'>
+    <div id='viewport' class='wrap'>
       <div class='text'>
         LIGHT SOURCE
       </div>

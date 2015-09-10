@@ -1,10 +1,11 @@
-$.fn.lightSource = function(options) {
+(function($) {
+  $.fn.lightSource = function(options) {
     var settings = $.extend({
       blur: 5,
       distanceBlur: true,
       distanceBlurAmount: 20,
-      viewport: $('.viewport'),
-      target: this,
+      viewport: this,
+      target: $('*',this),
       intensity: 5,
       opacity: 0.8,
       offsetX: 0,
@@ -18,14 +19,15 @@ $.fn.lightSource = function(options) {
 
     var shadowValue = ['drop-shadow(', settings.offsetX, 'px ', settings.offsetY, 'px ' , settings.blur, 'px rgba(0,0,0,', settings.opacity,'))'].join('');
 
+
     settings.viewport.css({
       position: 'relative',
       zIndex: 100
     });
 
-    settings.viewport.append('<div class="light"></div>');
+    settings.viewport.append('<div id="light"></div>');
 
-    var light = $('.light');
+    var light = $('#light');
 
     light.css({
       position: 'absolute',
@@ -76,11 +78,10 @@ $.fn.lightSource = function(options) {
         filter: shadowValue,
         webkitFilter: shadowValue
       });
+
+      return false;
     });
 
     return this;
   }
-
-$(document).ready(function() {
-  $('.text').lightSource({distanceBlur: true, blur: 2, intensity: 5, distanceBlurAmount: 20, opacity: 0.3, lightOpacity: 0.07});
-});
+})(jQuery);
